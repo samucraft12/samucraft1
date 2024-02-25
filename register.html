@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/mainPageStyle.css">
+    <title>MangaTiks | Sing Up / Log In</title>
+</head>
+<body>
+    <header class="navbar" id="header">
+        <li><a href="./MainPage.html">Home</a>
+            <ul>
+                <h1>Partners</h1>
+                <li>
+                    <a href=""></a>
+                </li>
+                <li>
+                    <a href=""></a>
+                </li>
+            </ul>
+        </li>
+        <li><a href="">Read</a>
+            <ul>
+                <li>
+                    <a href="">Tags</a>
+                </li>
+                <li>
+                    <a href="">Artist</a>
+                </li>
+                <li>
+                    <a href="">Name</a>
+                </li>
+                <li>
+                    <a href="">Search</a>
+                </li>
+                <li>
+                    <a href="">H</a>
+                </li>
+            </ul>
+        </li>
+        <li><a href="">Write & Draw</a>
+            <ul>
+                <li>
+                    <a href="./creationTool.html">New Manga</a>
+                </li>
+                <li>
+                    <a href="./userLibrary.html">Library</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <span>
+                <a href="./register.html">Register</a>
+            </span>
+            <ul>
+                <li>
+                    <a href="./register.html">Free Account (Writer / Reader)</a>
+                </li>
+                <li>
+                    <a href="./register.html">Premium Account (Writer / Reader / Cartoonist)</a>
+                </li>
+                <li>
+                    <a href="./register.html">Ultra (All Include)</a>
+                </li>
+            </ul>
+        </li>
+        <li id="account">
+            <span id="accountSpan">
+                <a href="">Account</a>
+            </span>
+            <ul>
+                <li>
+                    <a href="">Settings</a>
+                </li>
+                <li>
+                    <a href="">Log Out</a>
+                </li>
+                <li>
+                    <a href="">YES</a>
+                </li>
+            </ul>
+        </li>
+    </header>
+    <main class="mainR">
+        <section class="registerR">
+            <h1 class="maintitleR">Register to our page</h1>
+            <input type="email" name="" id="registerEmail" placeholder="E-mail">
+            <input type="password" id="pass" placeholder="Password">
+            <input type="password" id="checkPas" placeholder="CheckPassword">
+            <button id="sumbitRegisterR" onclick="checkRegisterRequirements()">Submit</button>
+        </section>
+        <section class="logInR">
+            <h1 class="maintitleR">Log In to our page</h1>
+            <input type="email" name="" id="logInEmail" placeholder="E-mail">
+            <input type="pasword" name="" id="logInPassword" placeholder="Password">
+            <input type="checkbox" name="remindMe" id="remindMeInput">
+            <button id="sumbitLoginR" onclick="checkLogInRequirements()">Submit</button>
+        </section>
+    </main>
+    <section class="plansR">
+        <div class="memberships">
+            <a href="" class="pay">Free Account $0</a>
+            <p class="centredTextsR">You can read and save your</p>
+            <p class="centredTextsR">favorite mangas and write your own story</p>
+            <p class="centredTextsR">The membership last: <strong class="strongR">∞</strong></p>
+        </div>
+        <div class="memberships">
+            <a href="" class="pay">Premium Account $10.000</a>
+            <p class="centredTextsR">You can read and save your</p>
+            <p class="centredTextsR">favorite mangas and write your own story</p>
+            <p class="centredTextsR">◾ All tools in the creator page unlocked</p>
+            <p class="centredTextsR">The membership last: <strong class="strongR">1 month</strong></p>
+        </div>
+        <div class="memberships">
+            <a href="" class="pay">Ultra $15.000</a>
+            <p class="centredTextsR">Have everything that the other memberships,</p>
+            <p class="centredTextsR">and you can comment to the fansubs to</p>
+            <p class="centredTextsR">suggest any manga or novel</p>
+        </div>
+    </section>
+    <footer class="downFooterR">
+        <li>
+            <a href="">Replit</a>
+        </li>
+        <li>
+            <a href="">Terms Of user</a>
+        </li>
+        <li>
+            <a href="">Others</a>
+        </li>
+        <li>
+            <a href="">Contact Us</a>
+        </li>
+    </footer>
+    <script src="./JS/accountAlgorythm.js"></script>
+</body>
+</html>

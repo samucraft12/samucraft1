@@ -1,0 +1,840 @@
+* {
+    color: black;
+    font-family: sans-serif;
+}
+body {
+    background-color: #3D5A51;
+    background-image: url("https://wallpaperset.com/w/full/1/7/9/473210.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 20px;
+}
+::selection {
+    background: #ff7b00;
+    color: rgb(255, 255, 255);
+}
+header h1 {
+    color: white;
+}
+header {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    list-style-type: none;
+    background-color: #1c1d20;
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    left: 0;
+    right: 0;
+    top: 0;
+    padding: 1em;
+    box-sizing: border-box;
+    text-align: center;
+    z-index: 20;
+    transition: 0.2s ease-in-out;
+}
+header:hover {
+    height: 300px;
+}
+header ul {
+    list-style-type: none;
+    padding: 0;
+    display: none;
+}
+header ul li {
+    color: #1c1d20;
+    font-size: 0;
+    transition: 2s;
+}
+header li a {
+    color: white;
+    text-decoration: none;
+}
+header li a:hover {
+    color: red;
+}
+header:hover ul {
+    display: list-item;
+}
+header:hover ul li {
+    list-style-type: "- " ;
+    font-size: medium;
+    color: white;
+}
+div.imgContainer {
+    margin-top: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    transition: 1s ease-in-out;
+    max-height: 60vh;
+}
+div img {
+    border-radius: 20px;
+    transition: 1s;
+}
+div section p,
+div section h1 {
+    transition-delay: 2s;
+    display: none;
+    transition: 1s;
+    font-size: smaller;
+}
+div.imgContainer:hover {
+    transform: translateX(-5em);
+}
+
+div:hover section p,
+div:hover section h1  {
+    display: grid;
+    grid-template-rows: 0.1fr 0.35fr 0.35fr;
+    text-align: center;
+}
+.plot {
+    margin: 10px;
+    box-sizing: border-box;
+}
+div:hover .plot {
+    background-color: #1c1d20;
+    border-radius: 3rem;
+    color: white;
+    height: 125%;
+    padding: 2em;
+}
+.plot h1 {
+    font-family: cursive;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 4px 1px gray;
+}
+.plot p {
+    color: white;
+    margin: 20px;
+    box-sizing: border-box;
+}
+.plot {
+    min-height: 50vh;
+    transition: 1s;
+}
+section p {
+    height: 40px;
+    width: 250px;
+}
+section h1 {
+    text-align: center;
+}
+#loader {
+    transition: 2s;
+}
+
+.circle {
+    display: grid;
+    align-items: center;
+    border: #1c1d20 solid 10px;
+    background-color: #1c1d20;
+    width: 50px;
+    height: 50px;
+    border-radius: 3rem;
+    overflow: hidden;
+    z-index: 1;
+}
+.rectangleVer {
+    width: 100%;
+    height: 20px;
+    border-radius: 20px;
+    background: linear-gradient(cyan, rgb(255, 230, 0));
+    text-align: center;
+    animation: rotate 1s infinite;
+    z-index: 2;
+}
+@keyframes rotate {
+    to {transform: rotate(0deg);}
+    from{transform: rotate(360deg);
+        background: linear-gradient(rgb(255, 230, 0), cyan);
+    }
+}
+.Explanationtext {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    grid-template-rows: 3fr;
+}
+#startLoad {
+    background-color: white;
+    border-radius: 3em;
+    transition: 2s;
+    padding: 0.9em;
+    width: 200px;
+    margin: 10px;
+    border: #1c1d20 solid;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#loader {
+    transition: 1s;
+    background-color: #1c1d20;
+    padding: 0.5em;
+    color: white;
+    margin: 5px;
+    border-radius: 0.4em;
+}
+#startLoad:active .circle{
+    display: grid;
+}
+.downFooter {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background-color: #131314;
+    position: absolute;
+    width: 100%;
+    height: 8%;
+    box-sizing: border-box;
+    left: 0;
+    padding: 1em;
+    list-style-type: none;
+}
+.downFooter li a {
+    color: white;
+    text-decoration: none;
+}
+.downFooter li a:hover {
+    color: red;
+}
+
+.mangasDivs {
+    display: grid;
+    grid-template-columns: repeat(4, 2fr);
+    margin: 10px;
+    text-align: center;
+}
+.mangacontainer:hover {
+    background: #d0d0e0;
+}
+.mangacontainer img {
+    min-height: 10vh;
+    min-width: 2vh;
+    max-height: 40vh;
+}
+.mangacontainer {
+    display: grid;
+    background: #131314;
+    justify-content: center;
+    border-radius: 10px;
+    margin: 20px;
+    transition: 1s;
+    padding: 0.5em;
+    min-height: 5vh;
+    width: 90%;
+    text-align: center;
+}
+.mangacontainer a {
+    color: white;
+    text-decoration: none;
+}
+.explore {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+}
+.exploreMangas img {
+    min-height: 10vh;
+    max-height: 30vh;
+    min-width: 2vh;
+    max-width:30vh;
+}
+.exploreMangas {
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    margin: 10px;
+    background-color: rgb(145, 76, 209);
+    border-radius: 0.5em;
+    width: 90%;
+    padding: 0.5em;
+    min-height: 5vh;
+    min-width: 1vh;
+    max-width: 25vh;
+    text-align: center;
+}
+.exploreMangas a {
+    color: black;
+    text-decoration: none;
+}
+.favCharacters {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1;
+    margin: 10px;
+    box-sizing: border-box;
+}
+.characterLists img {
+    min-height: 10vh;
+    min-width: 2vh;
+    max-height: 20vh;
+    max-width: 40vh;
+}
+.characterLists {
+    display: grid;
+    background: #131314;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 1em;
+    text-align: center;
+    min-height: 40vh;
+    align-items: end;
+    overflow: hidden;
+}
+.characterLists .characterMangaLink {
+    color: white;
+    text-decoration: none;
+    height: 20px;
+    animation: colorChange 2s infinite 1ms ease-in-out;
+}
+.characterLists img {
+    background-color: white;
+    min-height: 20vh;
+    max-height: 40vh;
+    border-radius: 3rem;
+    text-align: center;
+}
+.characterLists span {
+    color: white;
+}
+@keyframes colorChange {
+    0%,
+    10% {color: red;}
+    20% {color: green;}
+    40% {color: cyan;}
+    50% {color: crimson;}
+    60% {color: blueviolet;}
+    70% {color: orange;}
+    80% {color: darkred;}
+    90% {color: olivedrab;}
+    100% {color: white;}
+}
+h1 {
+    text-align: center;
+}
+/* All "CT" things are for the clases of the << creation tool >>*/
+.mainTitleCT {
+    margin-top: 80px;
+}
+.mainCT {
+    display: grid;
+    grid-template-columns: 0.25fr 4fr 0.25fr;
+}
+.page1 {
+    background-color: white;
+    border-radius: 0.4em;
+    min-height: 80vh;
+    width: 100%;
+    height: 100%;
+}
+.tools {
+    width: 80px;
+    margin: 20px;
+}
+.toolsN {
+    background-color: #131314;
+    color: white;
+    padding: 1em;
+    border: transparent;
+    width: 80px;
+    border-radius: 0.4em;
+    transition: 1s ease-out;
+}
+.toolsN:hover {
+    background-color: lightgray;
+    color: black;
+    scale: 1.2;
+}   
+.rangeCT {
+    background-color: #131314;
+    display: grid;
+    width: 80px;
+    border-radius: 0.4em;
+    color: white;
+}
+.rangeCT input {
+    padding: 0;
+}
+.previewCT {
+    display: grid;
+    margin: 10px;
+    background-color: #131314;
+    padding: 0.4em;
+    border-radius: 0.4em;
+}
+.previewCT p {
+     color: white;
+}
+.plubishButtonCT {
+    background-color: #131314;
+    color: white;
+    padding: 0.8em;
+    width: 300px;
+    transition: 2s;
+    border-radius: 0.8em;
+    filter: blur(1px);
+    border: white solid;
+}
+.plubishButtonCT:hover {
+    background-color: white;
+    color: #131314;
+    scale: 1.1;
+    filter: blur(0px);
+    border: #131314 solid;
+}
+.publishButton {
+    display: grid;
+    justify-content: center;
+}
+
+/* All "L" things are for the clases of the << userLibrary >>*/
+
+.mainTitleL {
+    margin-top: 80px;
+}
+.libraryL {
+    display: grid;
+    grid-template-columns: 0.3fr 1fr;
+}
+.followedAuthorsL {
+    display: list-item;
+}
+.followedAuthorsL .authorsL {
+    background-color: #131314;
+    width: 180px;
+    transition: 1s ease-in-out;
+    margin: 10px;
+    padding: 1em;
+    border-radius: 0.8em;
+}
+.followedAuthorsL .authorsL .AuthorsLinkL {
+    color: white;
+    text-decoration: none;
+}
+.recentsL {
+    transition: 1s ease;
+    background-color: #1c1d2060;
+    backdrop-filter: blur(2px);
+    border-radius: 1em;
+    width: 100%;
+    min-height: 68.3vh;
+    max-height: 68.3vh;
+    overflow-y: scroll;
+}
+.mangaCardContainerL {
+    background-color: white;
+    width: 90%;
+    border-radius: 1em;
+    margin: 10px;
+    padding: 3em;
+    box-sizing: border-box;
+    transition: 1s ease-in-out;
+}
+.followedAuthorsL {
+    background-color: #1313147a;
+    margin: 10px;
+    list-style-type: none;
+    border-radius: 0.8em;
+    color: white;
+    overflow-y: scroll;
+    min-height: 66.3vh;
+    max-height: 66.3vh;
+}
+.followedAuthorsL::-webkit-scrollbar {
+    background-color: #131314;
+    width: 10px;
+    border-radius: 10em;
+    transition: 1s;
+}
+.followedAuthorsL::-webkit-scrollbar-thumb {
+    background-color: white;
+    border-radius: 10rem;
+}
+.followedAuthorsL::-webkit-scrollbar-thumb:active {
+    background-color: lightgray;
+}
+.recentsL::-webkit-scrollbar {
+    background-color: #131314;
+    width: 10px;
+    border-radius: 10em;
+    transition: 1s;
+}
+.recentsL::-webkit-scrollbar-thumb {
+    background-color: white;
+    border-radius: 10rem;
+}
+.recentsL::-webkit-scrollbar-thumb:active {
+    background-color: lightgray;
+}
+body::-webkit-scrollbar {
+    background-color: #1c1d20;
+    width: 14px;
+    transition: 1s;
+}
+body::-webkit-scrollbar-thumb {
+    background-color: lightgray;
+    border-radius: 0.2em;
+}
+
+/* "R" means register rules */
+.maintitleR {
+    font-size: 30px;
+    transition: 1s ease;
+}
+.logInR:hover .maintitleR {
+    transform: translateY(30px);
+    color: white;
+}
+.logInR:hover {
+    backdrop-filter: blur(4px);
+    background-color: rgba(206, 31, 31, 0.452);
+}
+.registerR:hover {
+    backdrop-filter: blur(4px);
+    background-color: rgba(52, 170, 37, 0.575);
+}
+.registerR,
+.logInR {
+    transition: 1s ease-in;
+    padding: 10px;
+    border-radius: 3rem;
+}
+.registerR:hover .maintitleR {
+    transform: translateY(30px);
+    color: white;
+}
+.mainR {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.logInR button,
+.registerR button {
+    width: 80px;
+    background-color: #131314;
+    color: white;
+    padding: 0.8em;
+    align-items: center;
+    border-radius: 3rem;
+    border: white solid 2px;
+}
+.logInR,
+.registerR {
+    margin-top: 80px;
+    display: grid;
+    justify-items: center;
+    justify-content: center;
+}
+input {
+    width: 90%;
+    transition: 0.6s ease-in-out;
+    border-radius: 5rem;
+    padding: 0.6em;
+    margin: 2px;
+    border: #131314 solid;
+    background-color: white;
+}
+input:hover {
+    color: white;
+    background-color: #131314;
+    scale: 1.1;
+}
+.downFooterR {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background-color: #131314;
+    position: absolute;
+    width: 100%;
+    height: 8%;
+    box-sizing: border-box;
+    left: 0;
+    bottom: 0;
+    padding: 1em;
+    list-style-type: none;
+}
+.downFooterR li a {
+    color: white;
+    text-decoration: none;
+}
+.downFooterR li a:hover {
+    color: red;
+}
+.plansR {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    margin: 1em;
+}
+.plansR .memberships {
+    background-color: #131314;
+    padding: 1em;
+    border-radius: 1em;
+    width: 90%;
+    min-height: 20vh;
+    text-align: center;
+    transition: 1s ease-out;
+}
+.plansR .memberships .pay {
+    color: white;
+    text-decoration: none;
+}
+.plansR .memberships:hover {
+    background-color: rgba(255, 255, 255, 0.63);
+}
+.memberships:hover .pay {
+    color: black;
+}
+.memberships:hover .centredTextsR {
+    color: black;
+}
+#sumbitRegisterR,
+#sumbitLoginR {
+    cursor: pointer;
+}
+.centredTextsR {
+    display: grid;
+    justify-content: center;
+    color: white;
+    font-size: 14px;
+    width: 100%;
+    height: 10px;
+    transition: 0.2s ease-out;
+}
+.strongR {
+    color: white;
+}
+.memberships:hover .strongR {
+    color: black;
+}
+#account {
+    display: none;
+
+}    
+/* "BLG" is for the blog styles */
+
+.mainTitleBLG {
+    margin-top: 80px;
+    color: orange;
+}
+.BLG {
+    display: flex;
+    margin: 5px;
+}
+.material-symbols-outlined {
+    margin-left: 20px;
+    margin-top: 5pt;
+    transition: 1s ease-in-out;
+}
+.desplegableBGL {
+    width: 90%;
+    height:  40px;
+    max-height: 400px;
+    background-color: #acb2c5;
+    border-radius: 1em;
+    transition: 1s;
+    margin-right: 10px;
+}
+.paragraphGLB {
+    text-align: center;
+    background-color: #131314;
+    width: 100%;
+    border-radius: 1em;
+    transition: 1s ease;
+    height: 0;
+    margin: 0;
+}
+.desplegableBGL:hover .paragraphGLB {
+    height: 220px;
+    height: show;
+}
+.desplegableBGL:hover {
+    height: 250px;
+}
+.desplegableBGL:hover span {
+    color: white;
+}
+/* OWN CARROUSEL */
+
+.bigContainerBLG {
+    background-color:#13131441;
+    margin: 10px;
+    overflow: hidden;
+    transition: 1s ease-out;
+    border-radius: 1em;
+    min-height: 300px;
+}
+.downFooterBLG {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background-color: #131314;
+    position: absolute;
+    width: 100%;
+    height: 8%;
+    box-sizing: border-box;
+    left: 0;
+    padding: 1em;
+    list-style-type: none;
+}
+.downFooterBLG li a {
+    color: white;
+    text-decoration: none;
+}
+.downFooterBLG li a:hover {
+    color: red;
+}
+.separationBLG {
+    background-color: #131314;
+    height: 2px;
+    margin: 10px;
+    border-radius: 2em;
+}
+.transparentCardContainerBLG {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    width: 500%;
+    transition: 1s ease-in-out;
+}
+.transparentCardContainerBLG img {
+    width: 200px;
+    min-width: 200px;
+    max-width: 1000px;
+    margin: 30px;
+}
+.carrouselBigBLG {
+    overflow: hidden;
+}
+p.conatiner {
+    display: grid;
+    grid-template-columns: 10fr 5fr;
+    width: 800px;
+    height: 150px;
+    margin-left: 60px;
+    text-align: center;
+}
+p.conatiner span {
+    width: 600px;
+    color: white;
+    text-align: center;
+}
+.puntos {
+    margin-top: 60px;
+    width: 100%;
+    background-color: red;
+    padding: 1em;
+ 
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+ 
+    background-color: rgba(255, 255, 255, 0.212);
+     box-shadow: 5px 5px 5px rgba(54, 54, 54, 0.555);
+     border-radius: 2rem;
+}
+.punto {
+     list-style: none;
+     width: 2em;
+     height: 2em;
+     background-color: blue;
+     margin:  1em;
+     background-color: rgba(255, 255, 255, 0.212);
+     box-shadow: 5px 5px 5px rgba(54, 54, 54, 0.555);
+     border-radius: 15rem;
+}
+.punto.activo {
+     background-color: rgb(215, 247, 73);
+}
+
+/* "VIS" is for the visualizer*/
+.mainTitleVis {
+    margin-top: 80px;
+}
+.mangaPanelVIS {
+    background-color: whitesmoke;
+    min-height: 100px;
+    min-width: 300px;
+    max-width: 600px;
+    transition: 1s ease-in;
+}
+.visualiserVIS {
+    background-color: #1c1d2065;
+    border-radius: 2em;
+    padding: 20px;
+    display: grid;
+    justify-content: center;
+}
+.mangaPanelVIS {
+    min-height: 300px;
+    max-height: 900px;
+}
+.backNonFooter {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    justify-items: center;
+}
+.backNonFooter div {
+    background-color: #1c1d20;
+    width: 100px;
+    display: grid;
+    justify-content: center;
+    border-radius: 2em;
+}
+.backNonFooter span {
+    margin: 0;
+}
+.backNonFooter .left {
+    justify-self: left;
+}
+.backNonFooter .right {
+    justify-self: right;
+}
+.buttonVIS {
+    background-color: transparent;
+    border: 0;
+}
+
+/* TGS are for the tags page */
+
+.bodyTGS {
+    background-image: url("https://wallpapercave.com/wp/wp5085421.jpg");
+}
+.containerTraslucidTGS {
+    background-color: #1c1d20a1;
+    min-height: 10vh;
+    min-width: 10vh;
+    transition: 1s ease-in-out;
+    padding: 1em;
+    margin: 100px;
+    display: flex;
+    justify-content: center;
+    border-radius: 10rem;
+}
+.tagListTGS {
+    color: white;
+    list-style-type: none;
+    text-align: center;
+    transition: 0.5s ease-out;
+}
+.tagListTGS a {
+    text-decoration: none;
+    color: white;
+    position: relative;
+    transition: 0.2s ease;
+}
+.tagListTGS a:hover {
+    color: red;
+    text-decoration: line-through;
+}
+.tagListTGS:hover {
+    background-color: #131314;
+    border-radius: 1rem;
+    transform: translateX(5vh);
+    padding: 1em;
+}
